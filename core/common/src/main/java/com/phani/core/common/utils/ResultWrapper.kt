@@ -12,4 +12,22 @@ sealed class ResultWrapper<out T> {
         fun loading() : ResultWrapper<Nothing> = Loading
     }
 
+    inline fun <R> map(transfrom : (T) -> R) : ResultWrapper<R> {
+        return when(this) {
+            is Success -> Success(transfrom(data))
+            is Error -> Error(exception)
+            is Loading -> Loading
+        }
+    }
+
+    fun getOrNull() : T? = when(this) {
+        is Success -> data
+        else -> null
+    }
+
+    fun isSuccess() : Boolean = this is Success
+
+    fun isError() : Boolean = this is Error
+
+    fun isLoading() : Boolean = this is Loading
 }
