@@ -91,3 +91,5 @@ output.json
 
 # App bundles
 */build/
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
