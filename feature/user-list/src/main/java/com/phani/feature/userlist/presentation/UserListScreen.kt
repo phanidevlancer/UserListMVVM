@@ -66,11 +66,7 @@ fun UserListScreen(
             }
 
             else -> {
-                UserList(
-                    users = state.users,
-                    onUserClick = onUserClick,
-                    contentPadding = paddingValues
-                )
+
             }
         }
     }
