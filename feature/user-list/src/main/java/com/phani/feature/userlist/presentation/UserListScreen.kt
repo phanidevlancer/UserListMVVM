@@ -40,7 +40,7 @@ fun UserListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("User Listzz") }
+                title = { Text("User List") }
             )
         }
     ) { paddingValues ->

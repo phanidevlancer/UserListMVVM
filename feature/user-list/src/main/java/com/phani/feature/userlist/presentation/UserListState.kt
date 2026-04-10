@@ -5,5 +5,5 @@ import com.phani.feature.userlist.domain.model.User
 data class UserListState(
     val users: List<User> = emptyList(),
     val isLoading: Boolean = false,
-    val erro: String?
+    val error: String? = null
 )
