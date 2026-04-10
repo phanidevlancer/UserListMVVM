@@ -66,6 +66,7 @@ fun UserListScreen(
             }
 
             else -> {
+                // Display the list of users
                 UserList(
                     users = state.users,
                     onUserClick = onUserClick,
